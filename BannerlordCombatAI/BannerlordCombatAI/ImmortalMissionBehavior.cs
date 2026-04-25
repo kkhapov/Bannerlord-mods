@@ -2,6 +2,7 @@ using TaleWorlds.MountAndBlade;
 
 namespace BannerlordCombatAI
 {
+    // this thing is for debug only
     public class ImmortalMissionBehavior : MissionBehavior
     {
         public override MissionBehaviorType BehaviorType => MissionBehaviorType.Other;

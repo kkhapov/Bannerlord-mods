@@ -7,7 +7,7 @@ namespace BannerlordCombatAI
 {
     public class CombatAiAgentStatCalculateModel : AgentStatCalculateModel
     {
-        private AgentStatCalculateModel prev;
+        private readonly AgentStatCalculateModel prev;
 
         public CombatAiAgentStatCalculateModel(AgentStatCalculateModel prev)
         {
@@ -20,10 +20,20 @@ namespace BannerlordCombatAI
             if (!agent.IsHuman)
                 return;
 
-            ImprovedCombatAIUpdateStats(agent, agentDrivenProperties, 1f);
+            var settings = BannerlordCombatAISettings.Instance;
+            if (settings == null)
+            {
+                // todo: do not want to spam error to Log, but we need to notify user mod do not work
+                return;
+            }
+
+            if (!settings.EnableMod)
+                return;
+
+            ImprovedCombatAiUpdateStats(agent, agentDrivenProperties, settings.Difficulty);
         }
         
-        private void ImprovedCombatAIUpdateStats(Agent agent, AgentDrivenProperties agentDrivenProperties, float difficulty)
+        private void ImprovedCombatAiUpdateStats(Agent agent, AgentDrivenProperties agentDrivenProperties, float difficulty)
         {
             var num4 = difficulty + agent.Defensiveness;
             var difficultyModifier = GetDifficultyModifier();

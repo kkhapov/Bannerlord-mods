@@ -13,11 +13,10 @@ namespace BannerlordCombatAI
             // InformationManager.DisplayMessage(new InformationMessage("Mod for forced blocking has been loaded!"));
         }
 
-        // Этот метод вызывается каждый раз, когда начинается новая миссия (битва, тренировка и т.д.)
         public override void OnMissionBehaviorInitialize(Mission mission)
         {
             base.OnMissionBehaviorInitialize(mission);
-            mission.AddMissionBehavior(new ImmortalMissionBehavior());
+            //mission.AddMissionBehavior(new ImmortalMissionBehavior());
         }
 
         protected override void OnGameStart(Game game, IGameStarter gameStarterObject)
@@ -26,9 +25,14 @@ namespace BannerlordCombatAI
             game.GameTextManager.LoadGameTexts();
             var prev = gameStarterObject.Models.Where(x => x is AgentStatCalculateModel).ToArray();
 
-            InformationManager.DisplayMessage(new InformationMessage("Prev count: " + prev.Length));
-            
-            gameStarterObject.AddModel(new CombatAiAgentStatCalculateModel((AgentStatCalculateModel)prev[0]));
+            if (prev.Length > 0)
+            {
+                gameStarterObject.AddModel(new CombatAiAgentStatCalculateModel((AgentStatCalculateModel)prev[0]));
+            }
+            else
+            {
+                InformationManager.DisplayMessage(new InformationMessage("Bannerlord Combat AI: failed to find default AgentStatCalculateModel, combat AI changes won't work!"));
+            }
         }
     }
 }
