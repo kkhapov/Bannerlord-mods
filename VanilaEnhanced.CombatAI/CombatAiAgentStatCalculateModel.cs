@@ -3,7 +3,7 @@ using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
-namespace BannerlordCombatAI
+namespace CombatAI
 {
     public class CombatAiAgentStatCalculateModel : AgentStatCalculateModel
     {

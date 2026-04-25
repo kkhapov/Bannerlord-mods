@@ -1,6 +1,6 @@
 using TaleWorlds.MountAndBlade;
 
-namespace BannerlordCombatAI
+namespace CombatAI
 {
     // this thing is for debug only
     public class ImmortalMissionBehavior : MissionBehavior
