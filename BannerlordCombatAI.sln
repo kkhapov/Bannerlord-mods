@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BannerlordCombatAI", "BannerlordCombatAI\BannerlordCombatAI.csproj", "{4288F262-F49B-40F9-9F44-E5D97DECBC45}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanilaEnhanced.CombatAI", "VanilaEnhanced.CombatAI\VanilaEnhanced.CombatAI.csproj", "{4288F262-F49B-40F9-9F44-E5D97DECBC45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

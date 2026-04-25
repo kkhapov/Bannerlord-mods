@@ -3,7 +3,7 @@ using TaleWorlds.Core;
 using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 
-namespace CombatAI
+namespace VanilaEnhanced.CombatAI
 {
     public class CombatAiSubmoduleSubModule : MBSubModuleBase
     {

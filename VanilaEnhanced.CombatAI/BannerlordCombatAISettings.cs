@@ -2,7 +2,7 @@ using MCM.Abstractions.Attributes;
 using MCM.Abstractions.Attributes.v2;
 using MCM.Abstractions.Base.Global;
 
-namespace CombatAI
+namespace VanilaEnhanced.CombatAI
 {
     public class BannerlordCombatAISettings : AttributeGlobalSettings<BannerlordCombatAISettings>
     {
