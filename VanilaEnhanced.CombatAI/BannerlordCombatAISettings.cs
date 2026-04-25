@@ -6,9 +6,9 @@ namespace VanilaEnhanced.CombatAI
 {
     public class BannerlordCombatAISettings : AttributeGlobalSettings<BannerlordCombatAISettings>
     {
-        public override string Id => "BannerlordCombatAI";
-        public override string DisplayName => "Bannerlord Combat AI";
-        public override string FolderName => "BannerlordCombatAI";
+        public override string Id => "VanilaEnhanced.CombatAI";
+        public override string DisplayName => "Vanila Enhanced: CombatAI";
+        public override string FolderName => "VanilaEnhanced.CombatAI";
         public override string FormatType => "json";
 
         [SettingPropertyFloatingInteger("Difficulty", 0f, 1f, "#0.00", Order = 0, RequireRestart = false, HintText = "Adjust AI difficulty from 0 to 1")]

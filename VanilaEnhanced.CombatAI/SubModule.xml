@@ -1,22 +1,17 @@
  <Module>
-     <Name value="BannerlordCombatAI"/>
-     <Id value="BannerlordCombatAI"/>
+     <Name value="Vanila Enhanced: CombatAI"/>
+     <Id value="VanilaEnhanced.CombatAI"/>
      <Version value="v1.0.0"/>
      <SingleplayerModule value="true"/>
      <MultiplayerModule value="false"/>
      <DependedModules>
-         <DependedModule Id="Native"/>
-         <DependedModule Id="SandBoxCore"/>
-         <DependedModule Id="Sandbox"/>
-         <DependedModule Id="CustomBattle"/>
-         <DependedModule Id="StoryMode" />
-         <DependedModule Id="Bannerlord.MBOptionScreen"/>
+         <DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.11.3" />
      </DependedModules>
      <SubModules>
          <SubModule>
-             <Name value="BannerlordCombatAI"/>
-             <DLLName value="BannerlordCombatAI.dll"/>
-             <SubModuleClassType value="BannerlordCombatAI.CombatAiSubmoduleSubModule"/>
+             <Name value="VanilaEnhanced.CombatAI"/>
+             <DLLName value="VanilaEnhanced.CombatAI.dll"/>
+             <SubModuleClassType value="VanilaEnhanced.CombatAI.CombatAiSubmoduleSubModule"/>
              <Tags>
                  <Tag key="DedicatedServerType" value="none" />
                  <Tag key="IsNoRenderModeElement" value="false" />
